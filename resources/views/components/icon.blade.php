@@ -1,5 +1,5 @@
 @props(['name'])
-<svg {{ $attributes->merge(['class' => 'icon']) }} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<svg {{ $attributes->merge(['class' => 'icon w-[23px] h-[23px] flex-none']) }} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     @switch($name)
         @case('automation') <path d="m9 3-1 3-3 1 1 3-2 2 2 2-1 3 3 1 1 3h6l1-3 3-1-1-3 2-2-2-2 1-3-3-1-1-3Z"/><circle cx="12" cy="12" r="3"/> @break
         @case('industry') <path d="M3 21V10l6 3V7l6 4V3h5l1 18ZM7 17h1m4 0h1m4 0h1"/> @break
