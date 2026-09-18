@@ -12,5 +12,15 @@
         "source": "User supplied pexels-tiger-lily-4484073.jpg",
         "photo_id": 4484073,
         "provider": "Pexels"
+    },
+    "mobile": {
+        "source": "User supplied pexels-introspectivedsgn-16094263.jpg",
+        "photo_id": 16094263,
+        "provider": "Pexels"
+    },
+    "website": {
+        "source": "User supplied pexels-tranmautritam-69432.jpg",
+        "photo_id": 69432,
+        "provider": "Pexels"
     }
 }

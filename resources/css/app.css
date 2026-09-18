@@ -1345,12 +1345,12 @@ textarea:focus {
 .service-card.card-2 {
     background:
         linear-gradient(110deg, #0c1b30ed, #0b163599),
-        url("/images/website-card.svg") right center / cover;
+        url("/images/website-card.webp") right center / cover;
 }
 .service-card.card-3 {
     background:
         linear-gradient(110deg, #14152ced, #0d15377a),
-        url("/images/mobile-card.svg") right center / cover;
+        url("/images/mobile-card.webp") right center / cover;
 }
 .phone {
     --phone-angle: 0deg;
