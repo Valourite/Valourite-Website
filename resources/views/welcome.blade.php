@@ -30,7 +30,7 @@
     <section class="hero" aria-labelledby="hero-heading">
         <div class="hero-background"></div>
         <div class="container hero-content">
-            <p class="eyebrow">BESPOKE SOFTWARE DEVELOPMENT · SOUTH AFRICA</p>
+            <p class="eyebrow">LOCAL SOFTWARE DEVELOPMENT · SOUTH AFRICA</p>
             <p class="hero-brand">VALOURITE</p>
             <h1 id="hero-heading">Software that moves <br>your business <span>forward.</span></h1>
             <p class="hero-description">Less admin. Smarter systems. More possibilities.</p>
