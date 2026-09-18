@@ -84,8 +84,7 @@
         [&.purple]:[background:#161032] [&.purple]:text-white tablet:h-65 tablet:[&_h3]:text-[28px]"><span>A DIFFERENT PERSPECTIVE</span><h3 class="leading-[1.15] font-semibold">Build a<br>brighter<br>tomorrow.</h3><p>Room for your next big idea.</p><span class="mini-button text-[8px] [background:#1c394c] text-white [padding:7px_10px] inline-block mt-[13px] relative z-2">Explore what's possible ↗</span><div class="mini-landscape absolute right-[-45px] bottom-0 w-[70%] h-[70%]
         [background:linear-gradient(135deg,_#4d8796,_#1b354c)]
         [clip-path:polygon(0_100%,_40%_20%,_60%_50%,_85%_0,_100%_100%)]"></div><div class="mini-lines "></div></div></div>
-            <p class="preview-caption absolute bottom-[-20px] left-0 right-0 text-center text-[#8fa2bf] text-[10px] tracking-[0.4px]
-        mobile:text-[9px] desktop:text-[12px]">Design concepts · client previews coming soon</p>
+            <p class="preview-caption absolute bottom-[-20px] left-0 right-0 text-center text-[#8fa2bf] text-[10px] tracking-[0.4px] mobile:text-[12px] desktop:text-[12px]">From Concept to Design</p>
         @endforelse
     </div>
 @endif

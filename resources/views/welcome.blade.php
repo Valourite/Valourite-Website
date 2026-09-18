@@ -75,7 +75,7 @@
         <div class="layout-container hero-content w-[min(1200px,_calc(100%_-_96px))] mx-auto tablet:w-[calc(100%_-_64px)]
         mobile:w-[calc(100%_-_40px)] desktop:w-[min(1400px,_calc(100%_-_112px))] sm:max-w-[640px]
         md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px]">
-            <p class="eyebrow text-[11px] font-semibold tracking-[2.7px] text-[#a2a8ff] mb-[22px] mobile:mb-[18px] desktop:text-[13px]">LOCAL SOFTWARE DEVELOPMENT · SOUTH AFRICA</p>
+            <p class="eyebrow text-[13px] font-semibold tracking-[2.7px] text-[#a2a8ff] mb-[22px] mobile:mb-[18px] desktop:text-[13px]">LOCAL SOFTWARE DEVELOPMENT · SOUTH AFRICA</p>
             <p class="hero-brand text-[clamp(46px,_7.4vw,_104px)] tracking-[0.14em] leading-[1.05] font-normal mb-[25px]
         tablet:text-[8vw] mobile:text-[clamp(35px,_10vw,_65px)] mobile:tracking-[0.11em]
         desktop:text-[clamp(90px,_8vw,_120px)]">VALOURITE</p>
@@ -94,7 +94,7 @@
         items-center text-[10px] tracking-[2px] text-[#95a6c3] mt-[54px] [&_span]:text-[23px]
         [&_span]:text-[#99bfff] mobile:mt-10" href="#services">EXPLORE THE POSSIBILITIES <span>↓</span></a>
         </div>
-        <p class="hero-side absolute right-12 bottom-45 text-[#91a4ca] text-[10px] tracking-[3px] text-right leading-[2] tablet:hidden">CUSTOM<br>SYSTEMS.<br>REAL<br>POSSIBILITIES.</p>
+        <p class="hero-side absolute right-12 bottom-45 text-white font-bold text-sm tracking-[3px] text-right leading-[2] tablet:hidden">CUSTOM SYSTEMS. REAL POSSIBILITIES.</p>
     </section>
     <section id="services" class="overview layout-container relative [padding:65px_0_85px] mobile:[padding:50px_0_65px]
         w-[min(1200px,_calc(100%_-_96px))] mx-auto tablet:w-[calc(100%_-_64px)] mobile:w-[calc(100%_-_40px)]
