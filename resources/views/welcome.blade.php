@@ -26,6 +26,9 @@
         @endif
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <script type="application/ld+json">{!! json_encode(['@context' => 'https://schema.org', '@type' => 'Organization', 'name' => 'Valourite', 'url' => route('home'), 'email' => config('website.email'), 'areaServed' => ['@type' => 'Country', 'name' => 'South Africa'], 'contactPoint' => collect($contacts)->map(fn ($contact) => ['@type' => 'ContactPoint', 'telephone' => '+'.$contact['number'], 'contactType' => 'sales', 'availableLanguage' => 'English'])->all()], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_UNESCAPED_SLASHES) !!}</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.topology.min.js"></script>
+
     </head>
     <body class="m-0 [background:var(--ink)] text-[#f4f7ff] font-sans text-[16px] leading-[1.65] overflow-x-clip">
         <a class="[-webkit-tap-highlight-color:transparent] touch-manipulation no-underline
@@ -67,7 +70,7 @@
         mobile:[&_h1]:[text-shadow:0_2px_18px_#020713] mobile:[&_h1]:tracking-[-1px] mobile:[&_h1_br]:hidden
         desktop:pt-[170px] desktop:min-h-[850px] desktop:[&_h1]:text-[clamp(48px,_4.1vw,_68px)]
         desktop:[&_h1]:max-w-[890px]" aria-labelledby="hero-heading">
-                <div class="hero-background absolute [inset:0_0_2px] z-[-1]
+                <div id="hero-fog" class="hero-background absolute [inset:0_0_2px] z-[-1]
         [background-image:linear-gradient(90deg,_#020713e8_0%,_#030919bf_40%,_#0208172b_100%),_url('/images/hero-1600.webp')]
         bg-cover bg-center bg-fixed [clip-path:polygon(0_0,_100%_0,_100%_90%,_0_100%)] mobile:fixed
         mobile:[inset:0] mobile:h-[100svh] mobile:bg-scroll mobile:[background-position:60%_center]
@@ -359,4 +362,24 @@
             </div>
         </footer>
     </body>
+    <script>
+        if (
+            document.getElementById('hero-fog') &&
+            window.VANTA &&
+            !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        ) {
+            VANTA.TOPOLOGY({
+                el: '#hero-fog',
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200,
+                minWidth: 200,
+                scale: 1,
+                scaleMobile: 1,
+                color: 0x00def5,
+                backgroundColor: 0x141414
+            });
+        }
+    </script>
 </html>
