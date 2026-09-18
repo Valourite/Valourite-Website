@@ -19,7 +19,9 @@
         <meta property="og:url" content="{{ route('home') }}">
         <meta property="og:image" content="{{ asset('images/hero-1600.webp') }}">
         <meta name="twitter:card" content="summary_large_image">
-        <link rel="icon" href="{{ asset('favicon.svg') }}" type="image/svg+xml">
+        <link rel="icon" href="{{ asset('favicon.ico') }}?v=valourite" sizes="any">
+        <link rel="icon" href="{{ asset('favicon-32.png') }}" type="image/png" sizes="32x32">
+        <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}" sizes="180x180">
         <link rel="preload" as="image" href="{{ asset('images/hero-1600.webp') }}">
         @if (!app()->isProduction())
             <meta name="robots" content="noindex, nofollow">
@@ -34,7 +36,7 @@
         <a class="[-webkit-tap-highlight-color:transparent] touch-manipulation no-underline
         focus-visible:[outline:2px_solid_#7dd3fc] focus-visible:outline-offset-[6px] skip-link fixed
         top-[-100px] left-5 z-100 [background:#2639b5] p-3 focus:top-[10px]" href="#main">Skip to content</a>
-        <header class="site-header h-[86px] [padding:0_48px] flex justify-between items-center absolute [inset:0_0_auto] z-10
+        <header class="site-header text-white [text-shadow:0_2px_5px_#000,0_0_18px_#020713] h-[86px] [padding:0_48px] flex justify-between items-center absolute [inset:0_0_auto] z-10
         [&_nav]:flex [&_nav]:items-center [&_nav]:gap-[34px] [&_nav]:text-[14px]
         [&_nav_>_a:hover]:text-[#a8b4ff] [&_.button]:[padding:9px_16px] [&_.button]:min-h-[42px]
         [&_.button]:text-[12px] tablet:px-8 tablet:[&_nav]:gap-5 mobile:h-auto mobile:min-h-19 mobile:p-5
@@ -62,42 +64,44 @@
             <section class="hero min-h-[min(880px,_100svh)] relative isolate [padding:175px_0_135px]
         [clip-path:polygon(0_0,_100%_0,_100%_90%,_0_100%)]
         [background:linear-gradient(100deg,_#7760ff,_#54bfff)] mb-[-1px] [&_h1]:text-[clamp(32px,_3.9vw,_55px)]
-        [&_h1]:font-semibold [&_h1]:max-w-185 [&_h1]:tracking-[-1.5px] [&_h1_span]:text-[#c2c8ff]
+        [&_h1]:font-semibold [&_h1]:max-w-185 [&_h1]:tracking-[-1.5px] [&_h1_span]:text-[#e3ddff]
         wide:min-h-[850px] mobile:[padding:155px_0_105px] mobile:min-h-165
         mobile:[clip-path:polygon(0_0,_100%_0,_100%_95%,_0_100%)] mobile:[&_.eyebrow]:text-[8px]
         mobile:[&_.eyebrow]:tracking-[1.5px] mobile:[&_.eyebrow]:max-w-70
         mobile:[&_h1]:text-[clamp(35px,_9.2vw,_47px)] mobile:[&_h1]:leading-[1.15]
-        mobile:[&_h1]:[text-shadow:0_2px_18px_#020713] mobile:[&_h1]:tracking-[-1px] mobile:[&_h1_br]:hidden
+        mobile:[&_h1]:tracking-[-1px] mobile:[&_h1_br]:hidden
         desktop:pt-[170px] desktop:min-h-[850px] desktop:[&_h1]:text-[clamp(48px,_4.1vw,_68px)]
         desktop:[&_h1]:max-w-[890px]" aria-labelledby="hero-heading">
                 <div id="hero-fog" aria-hidden="true" class="hero-background fixed! inset-0 h-[100lvh] z-[-1]
         [background-image:linear-gradient(90deg,_#020713e8_0%,_#030919bf_40%,_#0208172b_100%),_url('/images/hero-1600.webp')]
         bg-cover bg-center mobile:[background-position:60%_center]
         mobile:[background-image:linear-gradient(90deg,_#020713ed_0%,_#030919c4_48%,_#02081755_100%),_url('/images/hero-1600.webp')]
-        reduce-motion:absolute! reduce-motion:h-full"></div>
-                <div class="layout-container hero-content w-[min(1200px,_calc(100%_-_96px))] mx-auto tablet:w-[calc(100%_-_64px)]
+        reduce-motion:absolute! reduce-motion:h-full
+        after:absolute after:inset-0 after:z-[1] after:pointer-events-none after:content-['']
+        after:[background:linear-gradient(90deg,_#02071399,_#02071355_60%,_#02071322)]"></div>
+                <div class="layout-container hero-content text-white [text-shadow:0_2px_5px_#000,0_0_24px_#020713] w-[min(1200px,_calc(100%_-_96px))] mx-auto tablet:w-[calc(100%_-_64px)]
         mobile:w-[calc(100%_-_40px)] desktop:w-[min(1400px,_calc(100%_-_112px))] sm:max-w-[640px]
         md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px]">
-                    <p class="eyebrow text-[13px] font-semibold tracking-[2.7px] text-[#a2a8ff] mb-[22px] mobile:mb-[18px] desktop:text-[13px]">LOCAL SOFTWARE DEVELOPMENT · SOUTH AFRICA</p>
+                    <p class="eyebrow text-[13px] font-semibold tracking-[2.7px] text-[#e3ddff] mb-[22px] mobile:mb-[18px] desktop:text-[13px]">LOCAL SOFTWARE DEVELOPMENT · SOUTH AFRICA</p>
                     <p class="hero-brand text-[clamp(46px,_7.4vw,_104px)] tracking-[0.14em] leading-[1.05] font-normal mb-[25px]
         tablet:text-[8vw] mobile:text-[clamp(35px,_10vw,_65px)] mobile:tracking-[0.11em]
         desktop:text-[clamp(90px,_8vw,_120px)]">VALOURITE</p>
                     <h1 class="leading-[1.15]" id="hero-heading">Software that moves <br>your business <span>forward.</span></h1>
-                    <p class="hero-description text-[#cbd5e6] [margin:25px_0_34px] text-[17px] mobile:text-[17px] mobile:text-[#eef2ff]
+                    <p class="hero-description text-[#f1f5ff] [margin:25px_0_34px] text-[17px] mobile:text-[17px] mobile:text-[#f1f5ff]
         mobile:max-w-75 desktop:text-[21px]">Less admin. Smarter systems. More possibilities.</p>
                     <div class="hero-actions flex flex-wrap items-center gap-6 mobile:gap-[18px]"><x-contact-button /><a class="[-webkit-tap-highlight-color:transparent] touch-manipulation no-underline
         focus-visible:[outline:2px_solid_#7dd3fc] focus-visible:outline-offset-[6px] text-link inline-flex
-        items-center gap-[9px] text-[14px] [&_.icon]:text-[#999bff] [&_.icon]:w-5 hover:text-[#9edaff]
+        items-center gap-[9px] text-[14px] [&_.icon]:text-[#ddd6ff] [&_.icon]:w-5 hover:text-[#9edaff]
         desktop:text-[17px]" href="mailto:{{ config('website.email') }}"><x-icon name="mail" />Email us</a><a class="[-webkit-tap-highlight-color:transparent] touch-manipulation no-underline
         focus-visible:[outline:2px_solid_#7dd3fc] focus-visible:outline-offset-[6px] text-link inline-flex
         items-center gap-[9px] text-[14px] [&_.icon]:text-[#999bff] [&_.icon]:w-5 hover:text-[#9edaff]
         desktop:text-[17px]" href="#contact"><x-icon name="phone" />Call us</a></div>
                     <a class="[-webkit-tap-highlight-color:transparent] touch-manipulation no-underline
         focus-visible:[outline:2px_solid_#7dd3fc] focus-visible:outline-offset-[6px] scroll-cue flex gap-[25px]
-        items-center text-[10px] tracking-[2px] text-[#95a6c3] mt-[54px] [&_span]:text-[23px]
+        items-center text-[10px] tracking-[2px] text-[#e2e8f0] mt-[54px] [&_span]:text-[23px]
         [&_span]:text-[#99bfff] mobile:mt-10" href="#services">EXPLORE THE POSSIBILITIES <span>↓</span></a>
                 </div>
-                <p class="hero-side absolute right-12 bottom-45 text-white font-bold text-sm tracking-[3px] text-right leading-[2] tablet:hidden">CUSTOM SYSTEMS. REAL POSSIBILITIES.</p>
+                <p class="hero-side [text-shadow:0_2px_5px_#000,0_0_18px_#020713] absolute right-12 bottom-45 text-white font-bold text-sm tracking-[3px] text-right leading-[2] tablet:hidden">CUSTOM SYSTEMS. REAL POSSIBILITIES.</p>
             </section>
             <section id="services" class="overview layout-container relative [padding:65px_0_85px] mobile:[padding:50px_0_65px]
         w-[min(1200px,_calc(100%_-_96px))] mx-auto tablet:w-[calc(100%_-_64px)] mobile:w-[calc(100%_-_40px)]
