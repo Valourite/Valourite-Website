@@ -70,13 +70,11 @@
         mobile:[&_h1]:[text-shadow:0_2px_18px_#020713] mobile:[&_h1]:tracking-[-1px] mobile:[&_h1_br]:hidden
         desktop:pt-[170px] desktop:min-h-[850px] desktop:[&_h1]:text-[clamp(48px,_4.1vw,_68px)]
         desktop:[&_h1]:max-w-[890px]" aria-labelledby="hero-heading">
-                <div id="hero-fog" class="hero-background absolute [inset:0_0_2px] z-[-1]
+                <div id="hero-fog" aria-hidden="true" class="hero-background fixed! inset-0 h-[100lvh] z-[-1]
         [background-image:linear-gradient(90deg,_#020713e8_0%,_#030919bf_40%,_#0208172b_100%),_url('/images/hero-1600.webp')]
-        bg-cover bg-center bg-fixed [clip-path:polygon(0_0,_100%_0,_100%_90%,_0_100%)] mobile:fixed
-        mobile:[inset:0] mobile:h-[100svh] mobile:bg-scroll mobile:[background-position:60%_center]
-        mobile:[clip-path:none]
+        bg-cover bg-center mobile:[background-position:60%_center]
         mobile:[background-image:linear-gradient(90deg,_#020713ed_0%,_#030919c4_48%,_#02081755_100%),_url('/images/hero-1600.webp')]
-        reduce-motion:bg-scroll reduce-motion:absolute reduce-motion:h-full"></div>
+        reduce-motion:absolute! reduce-motion:h-full"></div>
                 <div class="layout-container hero-content w-[min(1200px,_calc(100%_-_96px))] mx-auto tablet:w-[calc(100%_-_64px)]
         mobile:w-[calc(100%_-_40px)] desktop:w-[min(1400px,_calc(100%_-_112px))] sm:max-w-[640px]
         md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px]">
@@ -361,7 +359,6 @@
                 </div>
             </div>
         </footer>
-    </body>
     <script>
         if (
             document.getElementById('hero-fog') &&
@@ -382,4 +379,5 @@
             });
         }
     </script>
+    </body>
 </html>
