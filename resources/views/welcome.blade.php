@@ -32,7 +32,7 @@
         <div class="container hero-content">
             <p class="eyebrow">BESPOKE SOFTWARE DEVELOPMENT · SOUTH AFRICA</p>
             <p class="hero-brand">VALOURITE</p>
-            <h1 id="hero-heading">Software that moves<br>your business <span>forward.</span></h1>
+            <h1 id="hero-heading">Software that moves <br>your business <span>forward.</span></h1>
             <p class="hero-description">Less admin. Smarter systems. More possibilities.</p>
             <div class="flex flex-wrap items-center gap-6"><x-contact-button/><a class="text-link" href="mailto:{{ config('website.email') }}"><x-icon name="mail"/>Email us</a><a class="text-link" href="#contact"><x-icon name="phone"/>Call us</a></div>
             <a class="scroll-cue" href="#services">EXPLORE THE POSSIBILITIES <span>↓</span></a>
@@ -52,7 +52,7 @@
     </section>
     @if($testimonials->isNotEmpty())
     <section class="testimonials" aria-labelledby="reviews-heading">
-        <div class="container reviews-heading"><div><p class="eyebrow">CLIENT FEEDBACK</p><h2 id="reviews-heading">Good systems. Happy clients.</h2></div><div>@if($hasSamples)<p class="sample-notice">Sample testimonials · development preview only</p>@endif<button class="pause-reviews" aria-pressed="false" hidden>Pause scrolling</button></div></div>
+        <div class="container reviews-heading"><div><p class="eyebrow">CLIENT FEEDBACK</p><h2 id="reviews-heading">Good systems. Happy clients.</h2></div><div>@if($hasSamples)<p class="sample-notice">Sample testimonials · development preview only</p>@endif</div></div>
         @foreach($testimonials->chunk((int) ceil($testimonials->count() / 2)) as $row)
         <div class="review-row {{ $loop->even ? 'reverse' : '' }}"><div class="review-track"><div class="review-set">
             @foreach($row as $testimonial)
@@ -78,13 +78,14 @@
     </div>
 </main>
 <footer id="contact" class="contact-section">
+    <div class="contact-surface">
     <div class="container contact-grid">
         <div><p class="eyebrow">LET’S MAKE IT HAPPEN</p><p class="footer-brand">VALOURITE</p><h2>Let’s build something useful.</h2><p class="contact-intro">Tell us what you have in mind.<br>We work with businesses across South Africa.</p><div class="contact-people">
         @foreach($contacts as $contact)
             <div class="contact-person"><h3>{{ $contact['name'] }}</h3><a href="tel:+{{ $contact['number'] }}">{{ $contact['display'] }}</a><div class="flex gap-5"><a class="text-link" href="https://wa.me/{{ $contact['number'] }}"><x-icon name="chat"/>WhatsApp</a><a class="text-link" href="tel:+{{ $contact['number'] }}"><x-icon name="phone"/>Call</a></div></div>
         @endforeach
         </div><a class="text-link email-link" href="mailto:{{ config('website.email') }}"><x-icon name="mail"/>{{ config('website.email') }}</a></div>
-        <form class="contact-form" method="post" action="{{ route('enquiries.store') }}#contact">
+        <form id="enquiry-form" tabindex="-1" class="contact-form" method="post" action="{{ route('enquiries.store') }}#contact">
             @csrf
             <h3>Prefer to leave a message?</h3>
             @if(session('enquiry_sent'))<p class="form-success" role="status">{{ session('enquiry_sent') }}</p>@endif
@@ -97,7 +98,7 @@
         </form>
     </div>
     <div class="container footer-bottom"><p>© {{ date('Y') }} Valourite. All rights reserved.</p><a href="#main">Back to top ↑</a><span>IDEAS → SYSTEMS → PROGRESS</span></div>
+    </div>
 </footer>
-<dialog id="contact-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="Close contact options">×</button><p class="eyebrow">LET’S TALK</p><h2 id="dialog-title">Who would you like to chat to?</h2><p>Choose a contact to open WhatsApp.</p>@foreach($contacts as $contact)<a class="contact-choice" href="https://wa.me/{{ $contact['number'] }}?text={{ rawurlencode('Hi '.$contact['name'].', I would like to discuss a project with Valourite.') }}"><x-icon name="chat"/><span><strong>{{ $contact['name'] }}</strong><small>{{ $contact['display'] }}</small></span><x-icon name="arrow"/></a>@endforeach</dialog>
 </body>
 </html>
