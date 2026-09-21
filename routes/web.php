@@ -12,15 +12,15 @@ Route::get('/sitemap.xml', function () {
     return response()->view('sitemap')->header('Content-Type', 'application/xml');
 })->name('sitemap');
 
-Route::post('/deploy', function (Request $request) {
+Route::get('/deploy/{token}', function (Request $request, $token) {
     $configuredToken = (string) config('services.deploy.token');
-    $providedToken = (string) $request->bearerToken();
+    $providedToken = (string) $token;
 
     abort_if($configuredToken === '', 404);
 
     abort_unless(
         hash_equals($configuredToken, $providedToken),
-        404
+        401,
     );
 
     $result = Process::timeout(600)->run(
